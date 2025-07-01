@@ -35,7 +35,7 @@ from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 import base64
 
 # Configuration
-
+@dataclass
 class SecurityConfig:
     session_timeout_minutes: int = 15
     auto_lock_enabled: bool = True
@@ -43,7 +43,7 @@ class SecurityConfig:
     max_login_attempts: int = 3
     backup_enabled: bool = True
 
-
+@dataclass
 class UIConfig:
     theme: str = "dark"
     font_family: str = "Arial"
@@ -51,7 +51,7 @@ class UIConfig:
     show_tooltips: bool = True
     animations_enabled: bool = True
 
-
+@dataclass
 class EmergencyContact:
     id: str
     name: str
@@ -74,9 +74,11 @@ class EmergencyContact:
             'verified': self.verified
         }
     
+    @classmethod
     def from_dict(cls, data: dict):
         return cls(**data)
 
+@dataclass
 class EmergencyConfig:
     enabled: bool = False
     delay_hours: int = 72  # 3 days default
@@ -90,6 +92,7 @@ class EmergencyConfig:
     emergency_email_password: str = ""
     contacts: List[EmergencyContact] = field(default_factory=list)
 
+@dataclass
 class AppConfig:
     app_name: str = "Professional Password Manager"
     version: str = "2.0.0"
@@ -160,6 +163,7 @@ class SessionManager:
         return False
 
 # Data Models
+@dataclass
 class PasswordEntry:
     id: str
     app_name: str
@@ -184,6 +188,7 @@ class PasswordEntry:
             'notes': self.notes
         }
     
+    @classmethod
     def from_dict(cls, data: dict):
         return cls(
             id=data['id'],
