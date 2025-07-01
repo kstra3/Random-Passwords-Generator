@@ -46,6 +46,18 @@ pip install -r requirements.txt
 python main.py
 ```
 ---
+## 🔐 Master Password Lock Screen (Coming Soon)
+
+> 💡 I am working on adding secure vault access with a **Biometrics and 2FA** interface.  
+> Stay tuned for a new level of protection and much more! 🔒✨
+
+⚙️ This upcoming feature will:
+- Protect saved passwords with an extra security layer
+- Add optional “show password” toggle
+- Include fail-safe unlock logic and timeout control
+
+🚧 *MORE Features' in development – ETA: Version 2.0*
+---
 
 
 
