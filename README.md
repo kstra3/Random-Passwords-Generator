@@ -1,5 +1,5 @@
 <h1 align="center">🔐 Random Passwords Generator</h1>
-
+<h2 align="center">🐉HydraKey☣</h2>
 <p align="center">
   <b>A modern, secure password manager built with Python & PyQt5</b><br>
   💡 Fully customizable • 💾 Encrypted storage • 🌙 Dark mode UI • ⚙️ Feature-rich
